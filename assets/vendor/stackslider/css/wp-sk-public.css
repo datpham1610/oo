@@ -1,0 +1,7 @@
+.swiper-slide{text-align:center}
+.swiper-slide img{display:inline-block}
+.wpsk-carousel-conf{display: none;}
+.swiper-slide img{max-width:100%; max-height:100%;}
+.sk-gallery-container{background:#fff;}
+.sk-gallery-container .sk-image-title{font-size:22px;font-weight:bold;text-transform: capitalize;line-height: normal; padding:15px;}
+.sk-gallery-container .sk-image-caption{padding:0 15px;line-height: normal;}
