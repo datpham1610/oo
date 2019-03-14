@@ -473,7 +473,7 @@ body .wrapper_site.showcontact {
 .content_text p {
     font-family: EncodeSansCondensed-Regular;
     font-size: 15px;
-    line-height: 30px;
+    line-height: 19px;
     letter-spacing: 1px;
 }
 
@@ -680,6 +680,7 @@ body .wrapper_site.showcontact {
     -moz-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    z-index: 999;
 }
 
 .section_five p {
@@ -1286,9 +1287,8 @@ body .wrapper_site.showcontact {
 .left-nav {
     position: fixed;
     z-index: 10;
-    width: 100%;
+    width: 30%;
     height: 100%;
-    margin: auto;
     top: 0;
     right: 0;
     bottom: 0;
@@ -1310,7 +1310,7 @@ body .wrapper_site.showcontact {
     -moz-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding-left: 5%;
+    padding-left: 1%;
 }
 
 .left-nav ul {}
@@ -1599,7 +1599,7 @@ body .wrapper_site.showcontact {
     cursor: pointer
 }
 
-.tattoos .section_four .box_active{
+.tattoos .section_four .box_active {
     background: #CECECE;
 }
 
@@ -1674,11 +1674,13 @@ body .wrapper_site.showcontact {
     line-height: 25px;
     color: #000;
 }
-.tattoos .section_four .step_content .step_contact{
+
+.tattoos .section_four .step_content .step_contact {
     margin: 20px 0;
 }
-.tattoos .section_four .step_content .step_contact a{
-    color: rgb(0, 0, 0,0.2);
+
+.tattoos .section_four .step_content .step_contact a {
+    color: rgb(0, 0, 0, 0.2);
 }
 
 .tattoos .section_four .title_section {
@@ -1699,7 +1701,8 @@ body .wrapper_site.showcontact {
     background: #EFEFEF;
     padding: 25px;
 }
-.tattoos .section_five .st5.scroll{
+
+.tattoos .section_five .st5.scroll {
     overflow-y: scroll;
     max-height: 500px
 }
@@ -1808,7 +1811,8 @@ body .wrapper_site.showcontact {
     padding-bottom: 20px;
     cursor: pointer
 }
-.tattoos .section_five .appa_active .title{
+
+.tattoos .section_five .appa_active .title {
     font-weight: bold;
     color: #000
 }
@@ -1941,15 +1945,18 @@ body .wrapper_site.showcontact {
     margin-right: -100px;
 }
 
-.tattoos .section_eight .cover_slider .slick-prev, .cover_slider .slick-next{
+.tattoos .section_eight .cover_slider .slick-prev,
+.cover_slider .slick-next {
     width: 60px;
     height: 30px;
     top: 107%;
 }
-.tattoos .section_eight .cover_slider .slick-prev{
-   left: 35%;
+
+.tattoos .section_eight .cover_slider .slick-prev {
+    left: 35%;
 }
-.tattoos .section_eight .cover_slider .slick-next{
+
+.tattoos .section_eight .cover_slider .slick-next {
     right: 35%;
 }
 
@@ -2080,23 +2087,45 @@ body .wrapper_site.showcontact {
     position: relative;
     z-index: 20;
 }
+.tattoos .section_nine .left_slider div .name{
+    font-family: "BarlowCondensed-Regular";
+    font-size: 15px;
+    text-align: center
+}
+.tattoos .section_nine .left_slider .slick-slide {
+    opacity: 0.8
+}
 
-.tattoos .section_nine .left_slider .slick-prev, .left_slider .slick-next {
+.tattoos .section_nine .left_slider .slick-current {
+    opacity: 1 !important
+}
+
+.tattoos .section_nine .left_slider .slick-prev,
+.left_slider .slick-next {
     width: 30px;
     height: 60px
 }
-.tattoos .section_nine .left_slider .slick-active::before{
-    
-}
-.tattoos .section_nine .left_slider .slick-prev{
+
+.tattoos .section_nine .left_slider .slick-active::before {}
+
+.tattoos .section_nine .left_slider .slick-prev {
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
     transform: translateX(-50%);
     top: 103%
 }
-.tattoos .section_nine .left_slider .slick-next{
-   top: -13%;
-   right: 50%;
-   transform: translateX(50%)
+
+.tattoos .section_nine .left_slider .slick-next {
+    top: -13%;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+    transform: translateX(50%)
 }
 
 .tattoos .section_nine .left_slider .slick-track .slick-slide {
@@ -2245,7 +2274,7 @@ body .wrapper_site.showcontact {
     cursor: pointer
 }
 
-.piercings .section_third .bg_active{
+.piercings .section_third .bg_active {
     background: #CECECE
 }
 
@@ -2299,6 +2328,7 @@ body .wrapper_site.showcontact {
 
 .piercings .section_third .process-item .contact {
     color: rgba(0, 0, 0, 0.3) !important;
+    text-align: center;
 }
 
 .piercings .section_third .process-item {
@@ -2309,6 +2339,9 @@ body .wrapper_site.showcontact {
 .piercings .section_third .show_process {
     position: absolute;
     opacity: 1;
+    -webkit-transition: 2s all ease;
+    -o-transition: 2s all ease;
+    -moz-transition: 2s all ease;
     transition: 2s all ease
 }
 
@@ -2457,7 +2490,21 @@ body .wrapper_site.showcontact {
     font-family: 'BarlowCondensed-Regular';
     font-size: 20px;
 }
+.news .arrowleft{
+    max-width: 60px;
+    margin: 0 10px;
 
+}
+.news .number{
+    font-size: 15px;
+    line-height: 22px;
+    padding: 0 10px
+}
+.news .arrowright{
+    max-width: 60px;
+    margin: 0 10px;
+
+}
 .news .section_third .number_node {
     text-align: center
 }
@@ -2471,8 +2518,22 @@ body .wrapper_site.showcontact {
 }
 
 .news .section_third .news_ .text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-top: 10px;
 
@@ -2614,7 +2675,17 @@ body .wrapper_site.showcontact {
 }
 
 .store .section_second .imgplus {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     margin: 0 3px;
 }
@@ -2719,54 +2790,221 @@ body .wrapper_site.showcontact {
 }
 
 .tattooists .section_second .img2 {
-    
+
+    display: -webkit-box;
+
+    display: -webkit-flex;
+
+    display: -moz-box;
+
+    display: -ms-flexbox;
+
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     margin: 2px;
 
 }
 
 .tattooists .section_second .img2 .section_img1 {
-    padding-top: 51px;
+    padding-top: 49px;
     margin-right: 2px;
-    padding-left: 15%;
+    padding-left: 90px;
 }
 
 .tattooists .section_second .img2 .section_img2 {
     margin-left: 2px;
-    margin-bottom: 2px
+    margin-bottom: 2px;
 }
-
 .tattooists .section_second .section_img3 {
     margin: 2px;
 }
+
 .tattooists .section_second .img2 .section_img4 {
     margin-right: 1px;
-    
+
 }
+
 .tattooists .section_second .img2 .section_img5 {
     margin-left: 1px;
-   
+
 }
-.tattooists .section_second .section_img6{
+
+.tattooists .section_second .section_img6 {
     margin: 2px;
     padding-top: 23%
 }
-.tattooists .section_second .section_img7{
+
+.tattooists .section_second .section_img7 {
     padding-right: 30px;
     margin: 2px;
 }
-.tattooists .section_second .section_img8{
-    padding-right: 50% ;
+
+.tattooists .section_second .section_img8 {
+    padding-right: 50%;
     margin: 2px;
 }
-.tattooists .section_second .section_img9{
+
+.tattooists .section_second .section_img9 {
     margin: 2px;
 }
-.tattooists .section_second .section_img10{
+
+.tattooists .section_second .section_img10 {
     margin: 2px;
     padding-left: 25%
 }
-.tattooists .section_second .section_img11{
+
+.tattooists .section_second .section_img11 {
     margin: 2px;
+}
+
+.tattooists .section_second .image-item {
+    display: none
+}
+
+.tattooists .section_second .show_image {
+    display: block
+}
+
+.tattooists .section_second .item-active {
+    display: none
+}
+
+.tattooists .section_second .show_tag {
+    padding: 50px 30px 0px 55px;
+    display: block
+}
+
+.tattooists .section_second .item-active .name {
+    font-family: "BarlowCondensed-Regular";
+    font-weight: 900;
+    font-size: 24px;
+
+}
+
+.tattooists .section_second .item-active .img {
+    max-width: 145px;
+}
+
+.tattooists .section_second .item-active .tag {
+    font-family: "BarlowCondensed-Regular";
+    font-size: 16px;
+}
+
+.tattooists .section_second .left-nav ul li {
+    padding: 2px 0
+}
+
+.tattooists .section_first {
+    z-index: 999;
+    position: relative
+}
+.whyrecycle .section_second .img_before{
+    position: relative;
+}
+.whyrecycle .section_second .img_before::before{
+    content: '';
+    background: url('../img/img_before_whyrecycle.png') no-repeat;
+    background-size: cover;
+    height: 101%;
+    width: calc(100% + 10px);
+    top: -10px;
+    left:0px;
+    position: absolute;
+    z-index: -1;
+}
+.whyrecycle .section_second .img_before::after{
+    content: '';
+    background: url('../img/img_after_whyrecycle.png') no-repeat;
+    background-size: cover;
+    height: 101%;
+     width: calc(100% + 8px);
+    top: -14px;
+    left: 5px;
+    position: absolute;
+    z-index: -2;
+}
+.whyrecycle .section_second .image_abs {
+    position: relative;
+    padding: 2px;
+}
+
+.whyrecycle .section_second .image_abs::before {
+    position: absolute;
+    content: '';
+    background: url('../img/instagram3.png') no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    bottom: 25px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.whyrecycle .section_second .read_more {
+    color: rgba(0, 0, 0, 0.3) !important;
+    font-family: "BarlowCondensed-Regular";
+    font-size: 23px;
+    position: relative;
+    padding: 0 30px 0px 15px;
+    text-transform: lowercase
+}
+
+.whyrecycle .section_second .recycle-vertical-slider {
+    max-width: 340px
+}
+
+.whyrecycle .section_second .recycle-vertical-slider .slick-slide {
+    opacity: .8;
+    z-index: 9;
+    position: relative
+}
+
+.whyrecycle .section_second .recycle-vertical-slider .slick-current {
+    opacity: 1 !important;
+    z-index: 10;
+    margin: -30px 0;
+    position: relative
+}
+
+.whyrecycle .section_second .recycle-vertical-slider .slick-slide img {
+    transform: scale(0.8);
+}
+
+.whyrecycle .section_second .recycle-vertical-slider .slick-current img {
+    transform: scale(1.1);
+}
+
+.whyrecycle .section_second .recycle-vertical-slider .slick-slide:focus {
+    outline: none
+}
+
+.whyrecycle .section_second .recycle-vertical-slider .slick-prev {
+    height: 60px;
+    width: 30px;
+    top: 102%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.whyrecycle .section_second .recycle-vertical-slider .slick-next {
+    height: 60px;
+    width: 30px;
+    top: -15%;
+    right: 50%;
+    transform: translateX(50%);
 }

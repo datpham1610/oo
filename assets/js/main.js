@@ -106,11 +106,11 @@ var App = {
                     $(".left-nav ul li").removeClass("active");
                     $(".section-page:nth-child(" + sno + ")").addClass("section-active");
                     $(".left-nav ul li:nth-child(" + sno1 + ")").addClass("active");
-                    if (index == 0 || index == 4) {
-                        $('.left-nav').hide();
-                    } else {
-                        $('.left-nav').show();
-                    }
+                    // if (index == 0 || index == 4) {
+                    //     $('.left-nav').hide();
+                    // } else {
+                    //     $('.left-nav').show();
+                    // }
                 },
             });
             if (jQuery.scrollify.currentIndex() != 0) {
@@ -173,7 +173,7 @@ var App = {
         //     forcedImageHeight: 340
         // });
     },
-    map: function() {
+    googlemap: function() {
         // When the window has finished loading create our google map below
         google.maps.event.addDomListener(window, 'load', init);
 
@@ -304,7 +304,7 @@ var App = {
             // Get the HTML DOM element that will contain your map 
             // We are using a div with id="map" seen below in the <body>
             var mapElement = document.getElementById('map');
-
+            console.log(1);
             // Create the Google Map using our element and options defined above
             var map = new google.maps.Map(mapElement, mapOptions);
 
@@ -335,7 +335,6 @@ $(document).ready(function() {
     App.menushow();
     App.contactshow();
     App.galleryeffect();
-    App.map();
     App.slider_whycycle();
     $('.left-nav ul li a').click(function() {
         $.scrollify.move("#" + $(this).data('id'));
@@ -371,16 +370,26 @@ $(document).ready(function() {
         $(this).toggleClass('introduction_show', 'bg_introduction');
     });
 
-    $('.piercings .section_third .bg_process').click(function(){
+    $('.piercings .section_third .bg_process').click(function() {
         $('.piercings .section_third .process-item').removeClass('show_process');
-         $('.piercings .section_third .bg_process').removeClass('bg_active');
+        $('.piercings .section_third .bg_process').removeClass('bg_active');
         $(this).addClass('bg_active');
         $('.piercings .section_third #process-' + $(this).data('id')).addClass('show_process');
     });
 
-    $('.piercings .section_four .bg_aftercare').click(function(){
-        $(this).toggleClass('aftercare_show','.bg_aftercare');
+    $('.piercings .section_four .bg_aftercare').click(function() {
+        $(this).toggleClass('aftercare_show', '.bg_aftercare');
     });
+
+    $('.left-nav ul li a').click(function() {
+        $('.left-nav ul li').removeClass('active')
+        $(this).parent('').addClass('active');
+        $('.item-active').removeClass('show_tag')
+        $('#item-' + $(this).data('item')).addClass('show_tag');
+        $('.image-item').removeClass('show_image');
+        $('#image-' + $(this).data('image')).addClass('show_image');
+    });
+
 
     $('.left_slider').slick({
         slidesToShow: 4,
@@ -396,6 +405,66 @@ $(document).ready(function() {
         slidesToScroll: 1,
         asNavFor: '.left_slider',
         arrows: false
+    });
+
+    $('.appa-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        nextArrow: '<img class="slick-next" src="assets/img/arrow-right-white.png" />',
+        prevArrow: '<img class="slick-prev" src="assets/img/arrow-left-white.png" />',
+        responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+    //vertical slider
+    $(".recycle-vertical-slider").slick({
+        centerPadding: '130px',
+        dots: true,
+        initialSlide: 1,
+        infinite: false,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<img class="slick-next" src="assets/img/arrow-up.png" />',
+        nextArrow: '<img class="slick-prev" src="assets/img/arrow-down.png" />',
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+
+    $('.our_story_slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        nextArrow: '<img class="slick-next" src="assets/img/arrow-right.png" />',
+        prevArrow: '<img class="slick-prev" src="assets/img/arrow-left.png" />'
     });
     $('.cover_slider').slick({
         dots: false,
@@ -435,33 +504,8 @@ $(document).ready(function() {
     });
 
 
-}); {
-    // setTimeout(() => document.body.classList.add('render'), 60);
-    // const navdemos = Array.from(document.querySelectorAll('nav.demos > .demo'));
-    // const total = navdemos.length;
-    // const current = navdemos.findIndex(el => el.classList.contains('demo--current'));
-    // const navigate = (linkEl) => {
-    //     document.body.classList.remove('render');
-    //     document.body.addEventListener('transitionend', () => window.location = linkEl.href);
-    // };
-    // navdemos.forEach(link => link.addEventListener('click', (ev) => {
-    //     ev.preventDefault();
-    //     navigate(ev.target);
-    // }));
-    // document.addEventListener('keydown', (ev) => {
-    //     const keyCode = ev.keyCode || ev.which;
-    //     let linkEl;
-    //     if ( keyCode === 37 ) {
-    //         linkEl = current > 0 ? navdemos[current-1] : navdemos[total-1];
-    //     }
-    //     else if ( keyCode === 39 ) {
-    //         linkEl = current < total-1 ? navdemos[current+1] : navdemos[0];
-    //     }
-    //     else {
-    //         return false;
-    //     }
-    //     navigate(linkEl);
-    // });
+});
+App.googlemap(); {
     imagesLoaded('.glitch__img', { background: true }, () => {
         document.body.classList.remove('loading');
         document.body.classList.add('imgloaded');
